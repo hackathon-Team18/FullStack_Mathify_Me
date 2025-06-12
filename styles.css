@@ -1,0 +1,70 @@
+    body {
+            font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+            background-color: #f0f2f5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+        .gradient-header {
+            background-image: linear-gradient(to right, #a78bfa, #f472b6);
+        }
+        .text-custom-dark-gray {
+            color: hsl(222.2, 84%, 4.9%);
+        }
+        .text-custom-medium-gray {
+            color: rgba(107, 114, 128, 1);
+        }
+        .success-message-text {
+            color: rgb(156, 163, 175);
+        }
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: white;
+            color: black;
+            padding: 1rem 1.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(0.7);
+            transition: all 0.3s ease-in-out;
+            z-index: 1000;
+            max-width: 90%;
+            box-sizing: border-box;
+        }
+        .toast.show {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+            animation: bubblePop 0.3s ease-out;
+        }
+        @keyframes bubblePop {
+            0% { transform: scale(0.7); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .problem-content {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            line-height: 1.5rem;
+        }
+        .text-gradient-clip {
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+        .copied-feedback {
+            display: none;
+            align-items: center;
+            color: #22c55e;
+            font-weight: 500;
+            margin-left: 0.75rem;
+        }
+        .copied-feedback.show {
+            display: flex;
+        }
