@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathify Me</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-symbols">
+        <span>∑</span>
+        <span>π</span>
+        <span>∞</span>
+        <span>≠</span>
+        <span>√</span>
+    </div>
+
+    <header>
+        <h1 class="title">Mathify Me</h1>
+        <p class="subtitle">Personalized Math Problem Rewriting</p>
+        <p class="description">Transform standard math problems into engaging versions that match your interests <br> and passions ✨</p>
+        <div class="tagline">
+            <span>📚</span> + <span>🎨</span> = <span>🚀</span> Learning Made Fun!
+        </div>
+    </header>
+
+    <main>
+        <div class="input-container">
+            <div class="input-group">
+                <label for="math-input">📝 Original Math Problem</label>
+                <input type="text" id="math-input" placeholder="Paste your math word problem here... (e.g., 'Sarah has 24 apples. She gives 8 apples to her friend. How many apples does she have left?')" value="">
+            </div>
+            <div class="input-group">
+                <label for="theme">🌟 Select a Theme</label>
+                <select id="theme">
+                    <option value="">Choose a theme for your problem...</option>
+                    <option value="Football">🏈 Football</option>
+                    <option value="Minecraft">⛏️ Minecraft</option>
+                    <option value="Wildlife">🦁 Wildlife</option>
+                    <option value="Space">🚀 Space</option>
+                    <option value="Baking">🧁 Baking</option>
+                    <option value="Music">🎵 Music</option>
+                    <option value="Movies">🎬 Movies</option>
+                </select>
+            </div>
+            <button id="rewrite-btn" class="rewrite-btn">✨ Rewrite Problem</button>
+        </div>
+
+        <div class="output-container">
+            <div class="results" id="results">
+                <div class="result-box original">
+                    <div class="result-header">
+                        <i class="fas fa-file-alt"></i>
+                        <h2>Original Problem</h2>
+                        <span class="tag">Standard</span>
+                    </div>
+                    <p class="result-text" id="original-text"></p>
+                </div>
+                <div class="result-box rewritten">
+                    <div class="result-header">
+                        <i class="fas fa-sparkles"></i>
+                        <h2>Rewritten Problem</h2>
+                        <span id="problem-theme" class="tag"></span>
+                    </div>
+                    <p class="result-text" id="rewritten-text"></p>
+                </div>
+            </div>
+            <div class="action-buttons" id="action-buttons">
+                <button id="copy-btn" class="action-btn">📋 Copy Problem</button>
+                <button id="try-again-btn" class="action-btn">↺ Try Different Theme</button>
+            </div>
+            <div id="success-message" class="success-message">
+                <i class="fas fa-sparkles"></i>
+                Success! Youngmath problem has been rewritten.
+                <button class="close-btn" onclick="document.getElementById('success-message').classList.remove('show');">x</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="footer-text">🎯 Transform learning with personalized math problems 🚀</p>
+        <p class="footer-text">Making mathematics meaningful, one problem at a time</p>
+    </footer>
+
+    <div id="custom-toast">
+        <strong>Copied!</strong>
+        The rewritten problem has been copied to your clipboard.
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
